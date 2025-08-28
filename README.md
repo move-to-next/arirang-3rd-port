@@ -5,4 +5,5 @@
 - 08.24 - 웹디자인 시작.
 - 08.25 - 웹디자인 완료.
 - 08.26 - 사이트맵 및 클래스명 설정완료.
+- 08.27 - 퍼블리싱 시작.
 - 링크 - https://www.figma.com/design/8GkK8SQLHUdvKUoNZXek4T/%EC%95%84%EB%A6%AC%EB%9E%91-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EC%9B%B9%EB%94%94%EC%9E%90%EC%9D%B8?node-id=0-1&p=f&t=AxTzAt81XCNaC2x2-0
