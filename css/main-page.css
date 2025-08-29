@@ -2,6 +2,95 @@
 @import url("//fonts.googleapis.com/earlyaccess/nanummyeongjo.css");
 @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@font-face {
+  font-family: "JeongseonArirangHon";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSArirangHON-RegularA1.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+:not(header) > [class*=-inner] {
+  padding: 20vh 12vw;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+header .header-inner {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 4vh 5vw;
+  justify-content: space-between;
+}
+header .header-inner .logo {
+  position: relative;
+  min-width: 12vw;
+  padding-top: 5.2%;
+  height: 0;
+}
+header .header-inner .logo a {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+header .header-inner .logo a img {
+  position: absolute;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .header-inner .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+header .header-inner .menu nav.gnb {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header .header-inner .menu nav.gnb ul.gnb-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3vw;
+  list-style: none;
+}
+header .header-inner .menu nav.gnb ul.gnb-wrap li.gnb-list a.gnb-text {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+header .header-inner .menu button.menu-btn {
+  padding: 14px 20px;
+  border: none;
+  background-color: #7C1216;
+}
+header .header-inner .menu button.menu-btn img {
+  width: 20px;
+  transform: translateY(1px);
+  filter: invert(1);
+  margin-right: 5px;
+}
+header .header-inner .menu button.menu-btn span.text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  color: #FFFFFF;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -37,9 +126,207 @@ input {
   text-indent: -9999em;
 }
 
-@font-face {
+.main-page-container {
+  position: relative;
+  width: 100%;
+  top: 100%;
+  z-index: 50;
+}
+.main-page-container section.slide-banner {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.main-page-container section.slide-banner .slide-wrap {
+  position: relative;
+}
+.main-page-container section.slide-banner .slide-wrap .banner {
+  position: relative;
+  display: flex;
+  padding: 0 12.5vw;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3eede;
+  background-size: cover;
+}
+.main-page-container section.slide-banner .slide-wrap .banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/top-bg-1.jpg);
+  background-size: cover;
+  opacity: 0.5;
+  z-index: 1;
+}
+.main-page-container section.slide-banner .slide-wrap .banner > [class*=-section] {
+  transform: translateY(8%);
+}
+.main-page-container section.slide-banner .slide-wrap .banner .title-section {
+  display: flex;
+  flex-direction: column;
   font-family: "JeongseonArirangHon";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSArirangHON-RegularA1.woff") format("woff");
-  font-weight: normal;
-  font-display: swap;
+  z-index: 20;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.main-page-container section.slide-banner .slide-wrap .banner .title-section span.sub-title {
+  font-size: 3em;
+}
+.main-page-container section.slide-banner .slide-wrap .banner .title-section span.main-title {
+  font-size: 6em;
+  line-height: 1.5em;
+}
+.main-page-container section.slide-banner .slide-wrap .banner .thum-section {
+  z-index: 20;
+}
+.main-page-container section.slide-banner .slide-wrap .banner .thum-section .container {
+  position: relative;
+  width: 30vw;
+  height: 0;
+  padding-top: 120%;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+  overflow: hidden;
+}
+.main-page-container section.slide-banner .slide-wrap .banner .thum-section .container > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-page-container section.slide-banner .slide-wrap .banner.first::before {
+  background-position-y: 10%;
+}
+.main-page-container section.slide-banner .slide-wrap .banner.second::before {
+  background-position-y: 80%;
+}
+.main-page-container section.slide-banner .btn-items {
+  position: absolute;
+  top: 70vh;
+  left: 12vw;
+  width: 10%;
+}
+.main-page-container section.slide-banner .btn-items [class*=swiper-button] {
+  padding: 30px;
+  border-radius: 50%;
+  border: 3px solid #222222;
+}
+.main-page-container section.slide-banner .btn-items [class*=swiper-button]::after {
+  content: "\f285";
+  font-family: bootstrap-icons;
+  color: #222222;
+  font-size: 32px;
+}
+.main-page-container section.slide-banner .btn-items [class*=swiper-button]:first-child::after {
+  transform: rotate(180deg);
+}
+.main-page-container section.about {
+  position: relative;
+  width: 100%;
+  background-color: #F3EEDE;
+}
+.main-page-container section.about .about-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20vh;
+  height: 100%;
+}
+.main-page-container section.about .about-inner > [class*=-section] {
+  display: flex;
+  justify-content: space-between;
+  z-index: 60;
+  width: 100%;
+}
+.main-page-container section.about .about-inner > [class*=-section] .thum-section {
+  position: relative;
+}
+.main-page-container section.about .about-inner > [class*=-section] .thum-section .main-thum {
+  position: relative;
+  min-width: 25vw;
+  right: 0;
+  height: 0;
+  padding-top: 70%;
+  transform: translateY(-20%);
+}
+.main-page-container section.about .about-inner > [class*=-section] .thum-section .main-thum img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-page-container section.about .about-inner > [class*=-section] .thum-section .sub-thum {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  min-width: 12vw;
+  height: 0;
+  transform: translateX(-50%);
+  padding-top: 40%;
+}
+.main-page-container section.about .about-inner > [class*=-section] .thum-section .sub-thum img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-page-container section.about .about-inner .about-bg {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+.main-page-container section.about .about-inner .about-bg > [class*=-bg] {
+  position: relative;
+  margin-top: auto;
+}
+.main-page-container section.about .about-inner .about-bg > [class*=-bg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.2;
+}
+.main-page-container section.about .about-inner .about-bg .top-bg {
+  width: 20vw;
+  padding-top: 40%;
+}
+.main-page-container section.about .about-inner .about-bg .bottom-bg {
+  position: relative;
+  width: 35vw;
+  padding-top: 30%;
+  grid-column: 3;
+  grid-row: 3;
+}
+.main-page-container section.about .about-inner .about-bg .bottom-bg img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  -o-object-fit: contain;
+     object-fit: contain;
 }

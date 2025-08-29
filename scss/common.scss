@@ -1,3 +1,126 @@
-*{
-    
+@use "variables" as vars;
+
+// ##### COMMON STYLES #####
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
+img{
+    // max-width: 10vw;
+}
+:not(header)>[class*=-inner]{
+    padding: 20vh 12vw;
+}
+
+// MIXIN STYLE
+@mixin title-container{
+    display: flex;
+    flex-direction: column;
+    font-family: vars.$Kor-top;
+    z-index: 20;
+    user-select: none;
+    span.sub-title{
+        font-size: 3em;
+    }
+    span.main-title{
+        font-size: 6em;
+        line-height: 1.5em;
+    }
+}
+@mixin thum-container{
+    z-index: 20;
+    .container{
+        position: relative;
+        width: 30vw;
+        height: 0;
+        padding-top: 120%;
+        border-top-right-radius: 80px;
+        border-bottom-left-radius: 80px;
+        overflow: hidden;
+        &>img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+}
+
+// ##### HEADER #####
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    .header-inner{
+        position: relative;
+        width: 100%;
+        display: flex;
+        padding: 4vh 5vw;
+        justify-content: space-between;
+        .logo{
+            position: relative;
+            min-width: 12vw;
+            padding-top: 5.2%;
+            height: 0;
+            a{
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                img{
+                    position: absolute;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .menu{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 70%;
+            nav.gnb{
+                width: fit-content;
+                ul.gnb-wrap{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 3vw;
+                    list-style: none;
+                    li.gnb-list{
+                        a.gnb-text{
+                            font-family: vars.$Kor-cont;
+                            font-weight: 800;
+                            font-size: 24px;
+                            letter-spacing: -1px;
+                        }
+                    }
+                }
+            }
+            button.menu-btn{
+                padding: 14px 20px;
+                border: none;
+                background-color: vars.$crimson;
+                img{
+                    width: 20px;
+                    transform: translateY(1px);
+                    filter: invert(1);
+                    margin-right: 5px;
+                }
+                span.text{
+                    font-family: vars.$Eng;
+                    font-size: 24px;
+                    color: vars.$white;
+                }
+            }
+        }
+    }
+}
+// ##### FOOTER #####
+footer{}

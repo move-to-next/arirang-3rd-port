@@ -1,8 +1,11 @@
+@use "fonts";
+
 // FONTS
 $Eng: "Montserrat", sans-serif;
-$Kor-top: 'JSArirangHON-Regular';
+$Kor-top: 'JeongseonArirangHon';
 $Kor-head: 'Nanum Myeongjo', serif;
 $Kor-cont: 'Nanum Gothic', sans-serif;
+$bs-font: bootstrap-icons;
 
 // COLORS
 $black: #222222;
@@ -15,3 +18,15 @@ $sand: #F3EEDE;
 $dark-brown: #774E35;
 $crimson: #7C1216;
 $dark-navy: #212447;
+
+// COLORS RGB
+$black-rgb: 34, 34, 34;
+$gray-rgb: 119, 119, 119;
+$dim-gray-rgb: 211, 211, 211;
+$light-gray-rgb: 238, 238, 238;
+$white-rgb: 255, 255, 255;
+$sand-brown-rgb: 188, 164, 138;
+$sand-rgb: 243, 238, 222;
+$dark-brown-rgb: 119, 78, 53;
+$crimson-rgb: 124, 18, 22;
+$dark-navy-rgb: 33, 36, 71;

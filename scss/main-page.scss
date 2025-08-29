@@ -1,2 +1,178 @@
-@import "variables.scss","reset.scss","common.scss","fonts.scss";
+@use "variables" as vars;
+@use "common";
+@use "reset";
 
+.main-page-container{
+    position: relative;
+    width: 100%;
+    top: 100%;
+    z-index: 50;
+    section.slide-banner{
+        position: relative;
+        width: 100%;
+        display: flex;
+        .slide-wrap{
+            position: relative;
+            .banner{
+                position: relative;
+                display: flex;
+                padding: 0 12.5vw;
+                justify-content: space-between;
+                align-items: center;
+                height: 100vh;
+                background-color: rgba(vars.$sand, 1);
+                background-size: cover;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url(../images/top-bg-1.jpg);
+                    background-size: cover;
+                    opacity: 0.5;
+                    z-index: 1;
+                }
+                &>[class*=-section]{
+                    transform: translateY(8%);
+                }
+                .title-section{
+                    @include common.title-container;
+                }
+                .thum-section{
+                    @include common.thum-container;
+                }
+                &.first::before{
+                    background-position-y: 10%;
+                }
+                &.second::before{
+                    background-position-y: 80%;
+                }
+            }
+        }
+        .btn-items{
+            position: absolute;
+            top: 70vh;
+            left: 12vw;
+            width: 10%;
+            [class*=swiper-button]{
+                padding: 30px;
+                border-radius: 50%;
+                border: 3px solid vars.$black;
+                &::after{
+                    content: '\F285';
+                    font-family: vars.$bs-font;
+                    color: vars.$black;
+                    font-size: 32px;
+                }
+                &:first-child::after{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+    section.about{
+        position: relative;
+        width: 100%;
+        background-color: vars.$sand;
+        .about-inner{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20vh;
+            height: 100%;
+            &>[class*=-section]{
+                display: flex;
+                justify-content: space-between;
+                z-index: 60;
+                width: 100%;
+                .hero-section{}
+                .thum-section{
+                    position: relative;
+                    .main-thum{
+                        position: relative;
+                        min-width: 25vw;
+                        right: 0;
+                        height: 0;
+                        padding-top: 70%;
+                        transform: translateY(-20%);
+                        img{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            object-fit: cover;
+                        }
+                    }
+                    .sub-thum{
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        min-width: 12vw;
+                        height: 0;
+                        transform: translateX(-50%);
+                        padding-top: 40%;
+                        img{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+            .about-bg{
+                position: absolute;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto auto auto;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 20;
+                &>[class*=-bg]{
+                    position: relative;
+                    margin-top: auto;
+                    img{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        bottom: 0;
+                        object-fit: cover;
+                        opacity: 0.2;
+                    }
+                }
+                .top-bg{
+                    width: 20vw;
+                    padding-top: 40%;
+                }
+                .bottom-bg{
+                    position: relative;
+                    width: 35vw;
+                    padding-top: 30%;
+                    grid-column: 3;
+                    grid-row: 3;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 100%;
+                        transform: rotateY(180deg);
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+    section.lyrics{}
+    section.types{}
+    section.unesco{}
+    section.content{}
+}
