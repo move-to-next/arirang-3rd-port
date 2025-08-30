@@ -62,9 +62,14 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 :not(header) > [class*=-inner] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8vh;
   padding: 20vh 12vw;
 }
 
@@ -97,8 +102,7 @@ header .header-inner .logo a {
 header .header-inner .logo a img {
   position: absolute;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 header .header-inner .menu {
   display: flex;
@@ -107,7 +111,6 @@ header .header-inner .menu {
   width: 70%;
 }
 header .header-inner .menu nav.gnb {
-  width: -moz-fit-content;
   width: fit-content;
 }
 header .header-inner .menu nav.gnb ul.gnb-wrap {
@@ -140,9 +143,127 @@ header .header-inner .menu button.menu-btn span.text {
   color: #FFFFFF;
 }
 
+footer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #BCA48A;
+}
+footer .footer-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  padding: 6vh 12vw;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-inner .footer-main {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+footer .footer-inner .footer-main .footer-logo {
+  position: relative;
+  min-width: 12vw;
+  padding-top: 10.5%;
+  cursor: pointer;
+}
+footer .footer-inner .footer-main .footer-logo img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer .footer-inner .footer-main .footer-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: #FFFFFF;
+}
+footer .footer-inner .footer-main .footer-info address {
+  font-style: normal;
+}
+footer .footer-inner .footer-main .footer-info p.copyright {
+  margin: 0;
+}
+footer .footer-inner .footer-actions {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 1.5vh;
+}
+footer .footer-inner .footer-actions .any-sites {
+  position: relative;
+  height: 30%;
+}
+footer .footer-inner .footer-actions .any-sites button {
+  position: relative;
+  padding: 0.8vh 1vw;
+  border-radius: 5px;
+  border: none;
+  background-color: #774E35;
+}
+footer .footer-inner .footer-actions .any-sites button span {
+  display: inline-block;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+footer .footer-inner .footer-actions .any-sites button span::before {
+  content: "\f229";
+  font-family: bootstrap-icons;
+  font-size: 12px;
+  line-height: 14px;
+  display: inline-block;
+  color: #FFFFFF;
+  margin-right: 10px;
+  transform: translateY(1px);
+}
+footer .footer-inner .footer-actions .any-sites ul.any-site-lists {
+  display: none;
+}
+footer .footer-inner .footer-actions .any-sites ul.any-site-lists.active {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  bottom: 100%;
+  list-style: none;
+  margin-bottom: 3px;
+  border: 1px solid #BCA48A;
+}
+footer .footer-inner .footer-actions .any-sites ul.any-site-lists.active li.any-site-list {
+  padding: 5px 10px;
+}
+footer .footer-inner .footer-actions .any-sites ul.any-site-lists.active li.any-site-list a {
+  font-size: 12px;
+}
+footer .footer-inner .footer-actions .sns-links {
+  position: relative;
+  display: flex;
+  height: 30%;
+  gap: 20px;
+}
+footer .footer-inner .footer-actions .sns-links > * {
+  position: relative;
+  cursor: pointer;
+}
+footer .footer-inner .footer-actions .sns-links > * img {
+  width: 1.5vw;
+  filter: invert(1);
+  opacity: 0.5;
+}
+
 @font-face {
   font-family: "JeongseonArirangHon";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSArirangHON-RegularA1.woff") format("woff");
   font-weight: normal;
   font-display: swap;
 }
+
+/*# sourceMappingURL=type-arirang.css.map */

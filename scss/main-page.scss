@@ -93,37 +93,10 @@
                     flex-direction: column;
                     justify-content: space-between;
                     .title{
-                        h2.main-title{
-                            position: relative;
-                            display: block;
-                            width: fit-content;
-                            font-size: 56px;
-                            font-family: vars.$Kor-head;
-                            font-weight: 800;
-                            letter-spacing: -2px;
-                            z-index: 30;
-                            &::before{
-                                content: '';
-                                position: absolute;
-                                width: 100%;
-                                height: 30px;
-                                left: 0;
-                                bottom: 0;
-                                display: block;
-                                background-color: vars.$sand-brown;
-                                z-index: -1;
-                            }
-                        }
-                        p.sub-title{
-                            font-size: 32px;
-                            font-family: vars.$Kor-head;
-                            font-weight: 800;
-                            line-height: 30px;
-                            letter-spacing: -2px;
-                        }
+                        @include common.title;
                     }
                     .stat-box{
-                        font-family: vars.$Kor-cont;
+                        
                         font-size: 24px;
                         font-weight: 600;
                         p.stat-intro{
@@ -148,53 +121,14 @@
                     p.info-text{
                         width: 70%;
                         word-break: keep-all;
-                        font-family: vars.$Kor-cont;
+                        
                         font-size: 24px;
                         line-height: 36px;
                         font-weight: 500;
                     }
                 }
                 .thum-section{
-                    position: relative;
-                    .main-thum{
-                        position: relative;
-                        min-width: 25vw;
-                        right: 0;
-                        height: 0;
-                        padding-top: 70%;
-                        transform: translateY(-20%);
-                        border-top-right-radius: 18% 30%;
-                        border-bottom-left-radius: 18% 30%;
-                        overflow: hidden;
-                        img{
-                            position: absolute;
-                            width: 150%;
-                            height: 120%;
-                            bottom: 0;
-                            right: 0;
-                            object-fit: contain;
-                        }
-                    }
-                    .sub-thum{
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
-                        min-width: 12vw;
-                        height: 0;
-                        transform: translateX(-50%);
-                        padding-top: 40%;
-                        border-top-left-radius: 25% 30%;
-                        border-bottom-right-radius: 25% 30%;
-                        overflow: hidden;
-                        img{
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            left: 0;
-                            object-fit: cover;
-                        }
-                    }
+                    @include common.thum-section;
                 }
             }
             .about-bg{
@@ -243,8 +177,417 @@
             }
         }
     }
-    section.lyrics{}
-    section.types{}
-    section.unesco{}
-    section.content{}
+    section.lyrics{
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/pattern.svg);
+            opacity: 0.1;
+        }
+        .lyrics-inner{
+            position: relative;
+            .title{
+                @include common.title;
+            }
+            .lyric-container{
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                height: 100%;
+                gap: 3vw;
+                .lyric-view{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    width: 40%;
+                    height: auto;
+                    padding: 5vh 3vw;
+                    p.lyric{
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 5vh;
+                        font-size: 35px;
+                        line-height: 48px;
+                        font-weight: 700;
+                        margin: 0;
+                        z-index: 50;
+                        word-break: keep-all;
+                    }
+                    .lyric-border{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid vars.$dark-brown;
+                        z-index: 20;
+                        background-color: vars.$white;
+                        border-top-right-radius: 20%;
+                        border-bottom-left-radius: 20%;
+                        &:last-child{
+                            background-color: vars.$sand-brown;
+                            border-radius: 0;
+                            z-index: 19;
+                        }
+                    }
+                }
+                .lyric-means{
+                    width: 55%;
+                    padding: 2vh 0;
+                    p.lyric-mean{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        gap: 4vh;
+                        span{
+                            font-size: 28px;
+                            line-height: 42px;
+                            font-weight: 700;
+                            letter-spacing: -1px;
+                            word-break: keep-all;
+                            em{
+                                font-style: normal;
+                                font-size: 40px;
+                                color: vars.$dark-brown;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section.types{
+        background-color: vars.$sand;
+        .types-inner{
+            position: relative;
+            .title{
+                @include common.title;
+            }
+            .type-container{
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+                align-items: center;
+                .type-tab-btns{
+                    display: flex;
+                    width: 100%;
+                    gap: 1vw;
+                    button{
+                        padding: 2vh 0;
+                        flex: 1;
+                        background-color: transparent;
+                        &.area-tab-btn{
+                            border: 5px solid vars.$crimson;
+                            span{
+                                color: vars.$crimson;
+                            }
+                        }
+                        &.modern-tab-btn{
+                            border: 5px solid vars.$dark-navy;
+                            span{
+                                color: vars.$dark-navy;
+                            }
+                        }
+                        span{
+                            font-size: 28px;
+                            font-weight: 700;
+                        }
+                    }
+                    button.active{
+                        border: 0;
+                        &.area-tab-btn{
+                            background-color: vars.$crimson;
+                        }
+                        &.modern-tab-btn{
+                            background-color: vars.$dark-navy;
+                        }
+                        span{
+                            color: vars.$white;
+                        }
+                    }
+                };
+                .type-list-wrap{
+                    &>[class*=-list-wrap]{
+                        display: none;
+                    }
+                    &>[class*=-list-wrap].active{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        &>ul[class*=-list-cards]{
+                            list-style: none;
+                            display: flex;
+                            gap: 1vw;
+                            &>li[class*=-list-card]{
+                                width: 100%;
+                                position: relative;
+                                .thum{
+                                    position: relative;
+                                    width: 100%;
+                                    height: 0;
+                                    padding-top: 50%;
+                                    img{
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    }
+                                }
+                                .text-box{
+                                    position: relative;
+                                }
+                            }
+                        }
+                    }
+                    // .area-list-wrap{}
+                    // .modern-list-wrap{}
+                }
+            }
+        }
+    }
+    section.unesco{
+        .unesco-inner{
+            position: relative;
+            .title{
+                @include common.title;
+            }
+            .unesco-container{
+                display: flex;
+                gap: 3vw;
+                .hero-section{
+                    position: relative;
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 3vh;
+                    p.unesco-info{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5vh;
+                        span{
+                            
+                            font-size: 32px;
+                            line-height: 48px;
+                            color: vars.$black;
+                            letter-spacing: -1px;
+                            em{
+                                font-style: normal;
+                                font-size: 40px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                    button.more-btn{
+                        @include common.more-btn;
+                    }
+                    .hero-section-bg{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        opacity: 0.1;
+                        z-index: -1;
+                    }
+                }
+                .thum-section{
+                    @include common.thum-section;
+                }
+            }
+        }
+    }
+    section.content{
+        .content-inner{
+            position: relative;
+            height: 100%;
+            flex-direction: row;
+            gap: 2vw;
+            [class*=content-]{
+                article{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3vh;
+                    h2.content-title{
+                        
+                        font-size: 36px;
+                        line-height: 40px;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .content-left{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                gap: 5vh;
+                article.arirang-story{
+                    .video-cards{
+                        display: flex;
+                        gap: 1vw;
+                        .video-card{
+                            position: relative;
+                            width: 100%;
+                            &>[class*=video-]{
+                                display: none;
+                            }
+                            &>[class*=video-].active{
+                                display: block;
+                            }
+                            .video-thum{
+                                position: relative;
+                                max-width: 20vw;
+                                padding-top: 60%;
+                                background-color: vars.$black;
+                                cursor: pointer;
+                                &::after{
+                                    content: '\F4F2';
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    display: block;
+                                    font-family: vars.$bs-font;
+                                    font-size: 40px;
+                                    color: vars.$white;
+                                    transform: translate(-50%, -50%);
+                                }
+                                img{
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    left: 0;
+                                    object-fit: cover;
+                                    opacity: 0.5;
+                                }
+                            }
+                            .video-youtube{
+                                position: relative;
+                            }
+                        }
+                    }
+                    .news-wrap{
+                        position: relative;
+                        width: 100%;
+                        ul.news-lists{
+                            list-style: none;
+                            li.news-list{
+                                position: relative;
+                                width: 100%;
+                                padding: 10px 5px;
+                                border-bottom: 1px solid rgba(vars.$black, 0.3);
+                                overflow: hidden;
+                                a{
+                                    position: relative;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 1;
+                                    -webkit-box-orient: vertical;
+                                    font-size: 18px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                                &:last-child{
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                article.arirang-show{
+                    position: relative;
+                    ul.arirang-show-lists{
+                        position: relative;
+                        list-style: none;
+                        display: flex;
+                        gap: 1vw;
+                        li.arirang-show-list{
+                            width: 100%;
+                            cursor: pointer;
+                            box-shadow: 0 0 15px rgba(vars.$black, 0.5);
+                            .thum{
+                                position: relative;
+                                width: 100%;
+                                height: 0;
+                                padding-top: 140%;
+                                img{
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    bottom: 0;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content-right{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                article.museum-info{
+                    position: relative;
+                    height: 100%;
+                    .content-info{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        height: 100%;
+                        gap: 4vh;
+                        .museum-map{
+                            position: relative;
+                            width: 100%;
+                            height: 60%;
+                            iframe{
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        address.museum-overview{
+                            position: relative;
+                            display: block;
+                            padding: 2% 4%;
+                            height: 40%;
+                            dl{
+                                font-style: normal;
+                                font-size: 18px;
+                                dt{
+                                    font-weight: 800;
+                                    display: block;
+                                    margin-bottom: 1vh;
+                                    &:not(:first-child){
+                                        margin-top: 3vh;
+                                    }
+                                    em{
+                                        display: inline-block;
+                                        font-style: normal;
+                                        font-size: 14px;
+                                        margin-left: 0.5vw;
+                                        font-weight: 700;
+                                        color: vars.$dark-brown;
+                                    }
+                                }
+                                dd{
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
