@@ -97,7 +97,8 @@ header .header-inner .logo a {
 header .header-inner .logo a img {
   position: absolute;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .header-inner .menu {
   display: flex;
@@ -106,6 +107,7 @@ header .header-inner .menu {
   width: 70%;
 }
 header .header-inner .menu nav.gnb {
+  width: -moz-fit-content;
   width: fit-content;
 }
 header .header-inner .menu nav.gnb ul.gnb-wrap {
@@ -144,5 +146,3 @@ header .header-inner .menu button.menu-btn span.text {
   font-weight: normal;
   font-display: swap;
 }
-
-/*# sourceMappingURL=type-arirang.css.map */

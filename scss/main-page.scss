@@ -88,7 +88,72 @@
                 justify-content: space-between;
                 z-index: 60;
                 width: 100%;
-                .hero-section{}
+                .hero-section{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .title{
+                        h2.main-title{
+                            position: relative;
+                            display: block;
+                            width: fit-content;
+                            font-size: 56px;
+                            font-family: vars.$Kor-head;
+                            font-weight: 800;
+                            letter-spacing: -2px;
+                            z-index: 30;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                height: 30px;
+                                left: 0;
+                                bottom: 0;
+                                display: block;
+                                background-color: vars.$sand-brown;
+                                z-index: -1;
+                            }
+                        }
+                        p.sub-title{
+                            font-size: 32px;
+                            font-family: vars.$Kor-head;
+                            font-weight: 800;
+                            line-height: 30px;
+                            letter-spacing: -2px;
+                        }
+                    }
+                    .stat-box{
+                        font-family: vars.$Kor-cont;
+                        font-size: 24px;
+                        font-weight: 600;
+                        p.stat-intro{
+                            margin: auto;
+                        }
+                        .stat-count{
+                            display: flex;
+                            gap: 1vw;
+                            span{
+                                font-size: 24px;
+                                font-weight: 600;
+                                color: vars.$dark-brown;
+                            }
+                            span.stat-type-num{
+                                font-family: vars.$Eng;
+                                font-size: 60px;
+                                font-weight: 800;
+                                letter-spacing: -2px;
+                            }
+                        }
+                    }
+                    p.info-text{
+                        width: 70%;
+                        word-break: keep-all;
+                        font-family: vars.$Kor-cont;
+                        font-size: 24px;
+                        line-height: 36px;
+                        font-weight: 500;
+                    }
+                }
                 .thum-section{
                     position: relative;
                     .main-thum{
@@ -98,13 +163,16 @@
                         height: 0;
                         padding-top: 70%;
                         transform: translateY(-20%);
+                        border-top-right-radius: 18% 30%;
+                        border-bottom-left-radius: 18% 30%;
+                        overflow: hidden;
                         img{
                             position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            left: 0;
-                            object-fit: cover;
+                            width: 150%;
+                            height: 120%;
+                            bottom: 0;
+                            right: 0;
+                            object-fit: contain;
                         }
                     }
                     .sub-thum{
@@ -115,6 +183,9 @@
                         height: 0;
                         transform: translateX(-50%);
                         padding-top: 40%;
+                        border-top-left-radius: 25% 30%;
+                        border-bottom-right-radius: 25% 30%;
+                        overflow: hidden;
                         img{
                             position: absolute;
                             width: 100%;
@@ -138,6 +209,7 @@
                 &>[class*=-bg]{
                     position: relative;
                     margin-top: auto;
+                    transform: translateY(-50%);
                     img{
                         position: absolute;
                         width: 100%;
