@@ -280,23 +280,23 @@
                     width: 100%;
                     gap: 1vw;
                     button{
-                        padding: 2vh 0;
+                        padding: 1vh 0;
                         flex: 1;
                         background-color: transparent;
                         &.area-tab-btn{
-                            border: 5px solid vars.$crimson;
+                            border: 3px solid vars.$crimson;
                             span{
                                 color: vars.$crimson;
                             }
                         }
                         &.modern-tab-btn{
-                            border: 5px solid vars.$dark-navy;
+                            border: 3px solid vars.$dark-navy;
                             span{
                                 color: vars.$dark-navy;
                             }
                         }
                         span{
-                            font-size: 28px;
+                            font-size: 24px;
                             font-weight: 700;
                         }
                     }
@@ -321,6 +321,7 @@
                         display: flex;
                         flex-direction: column;
                         align-items: center;
+                        gap: 2vh;
                         &>ul[class*=-list-cards]{
                             list-style: none;
                             display: flex;
@@ -328,6 +329,7 @@
                             &>li[class*=-list-card]{
                                 width: 100%;
                                 position: relative;
+                                cursor: pointer;
                                 .thum{
                                     position: relative;
                                     width: 100%;
@@ -344,12 +346,46 @@
                                 }
                                 .text-box{
                                     position: relative;
+                                    padding: 8% 4%;
+                                    color: vars.$white;
+                                    p.card-title{
+                                        font-family: vars.$Kor-head;
+                                        font-size: 30px;
+                                        margin: 0 0 2vh 0;
+                                        span.sub-title{
+                                            display: inline-block;
+                                            font-size: 18px;
+                                            margin-left: 0.5vw;
+                                        }
+                                    }
+                                    span.card-info{
+                                        font-size: 13px;
+                                        word-break: keep-all;
+                                    }
                                 }
                             }
                         }
                     }
-                    // .area-list-wrap{}
-                    // .modern-list-wrap{}
+                    .area-list-wrap{
+                        ul.area-list-cards{
+                            li.area-list-card{
+                                background-color: vars.$crimson;
+                            }
+                        }
+                        button.more-btn{
+                            @include common.more-btn;
+                        }
+                    }
+                    .modern-list-wrap{
+                        ul.modern-list-cards{
+                            li.modern-list-card{
+                                background-color: vars.$dark-navy;
+                            }
+                        }
+                        button.more-btn{
+                            @include common.more-btn;
+                        }
+                    }
                 }
             }
         }
@@ -393,13 +429,45 @@
                     .hero-section-bg{
                         position: absolute;
                         top: 50%;
+                        width: 50%;
+                        height: 100%;
                         transform: translateY(-50%);
-                        opacity: 0.1;
+                        opacity: 0.2;
+                        mask-image: url(../images/icon/unesco.png);
+                        mask-repeat: no-repeat;
+                        mask-size: contain;
+                        mask-position: center center;
+                        background-color: vars.$sand-brown;
                         z-index: -1;
                     }
                 }
                 .thum-section{
                     @include common.thum-section;
+                    .main-thum{
+                        img{
+                            width: 120%;
+                            left: -10%;
+                        }
+                    }
+                    .sub-thum{
+                        background-color: vars.$sand-brown;
+                        border-radius: 50%;
+                        padding-top: 48%;
+                        z-index: 20;
+                        .ichh-logo{
+                            position: absolute;
+                            width: 70%;
+                            height: 70%;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            mask-image: url(../images/icon/ichh-logo.svg);
+                            mask-size: contain;
+                            mask-position: center center;
+                            background-color: vars.$white;
+                            z-index: 50;
+                        }
+                    }
                 }
             }
         }
@@ -543,7 +611,7 @@
                         flex-direction: column;
                         justify-content: space-between;
                         height: 100%;
-                        gap: 4vh;
+                        gap: 2vh;
                         .museum-map{
                             position: relative;
                             width: 100%;
@@ -559,11 +627,12 @@
                         address.museum-overview{
                             position: relative;
                             display: block;
-                            padding: 2% 4%;
-                            height: 40%;
+                            padding: 5% 4%;
+                            height: 50%;
                             dl{
                                 font-style: normal;
-                                font-size: 18px;
+                                font-size: 20px;
+                                margin: 0;
                                 dt{
                                     font-weight: 800;
                                     display: block;

@@ -681,24 +681,24 @@ input {
   gap: 1vw;
 }
 .main-page-container section.types .types-inner .type-container .type-tab-btns button {
-  padding: 2vh 0;
+  padding: 1vh 0;
   flex: 1;
   background-color: transparent;
 }
 .main-page-container section.types .types-inner .type-container .type-tab-btns button.area-tab-btn {
-  border: 5px solid #7C1216;
+  border: 3px solid #7C1216;
 }
 .main-page-container section.types .types-inner .type-container .type-tab-btns button.area-tab-btn span {
   color: #7C1216;
 }
 .main-page-container section.types .types-inner .type-container .type-tab-btns button.modern-tab-btn {
-  border: 5px solid #212447;
+  border: 3px solid #212447;
 }
 .main-page-container section.types .types-inner .type-container .type-tab-btns button.modern-tab-btn span {
   color: #212447;
 }
 .main-page-container section.types .types-inner .type-container .type-tab-btns button span {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
 }
 .main-page-container section.types .types-inner .type-container .type-tab-btns button.active {
@@ -720,6 +720,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2vh;
 }
 .main-page-container section.types .types-inner .type-container .type-list-wrap > [class*=-list-wrap].active > ul[class*=-list-cards] {
   list-style: none;
@@ -729,6 +730,7 @@ input {
 .main-page-container section.types .types-inner .type-container .type-list-wrap > [class*=-list-wrap].active > ul[class*=-list-cards] > li[class*=-list-card] {
   width: 100%;
   position: relative;
+  cursor: pointer;
 }
 .main-page-container section.types .types-inner .type-container .type-list-wrap > [class*=-list-wrap].active > ul[class*=-list-cards] > li[class*=-list-card] .thum {
   position: relative;
@@ -747,6 +749,58 @@ input {
 }
 .main-page-container section.types .types-inner .type-container .type-list-wrap > [class*=-list-wrap].active > ul[class*=-list-cards] > li[class*=-list-card] .text-box {
   position: relative;
+  padding: 8% 4%;
+  color: #FFFFFF;
+}
+.main-page-container section.types .types-inner .type-container .type-list-wrap > [class*=-list-wrap].active > ul[class*=-list-cards] > li[class*=-list-card] .text-box p.card-title {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 30px;
+  margin: 0 0 2vh 0;
+}
+.main-page-container section.types .types-inner .type-container .type-list-wrap > [class*=-list-wrap].active > ul[class*=-list-cards] > li[class*=-list-card] .text-box p.card-title span.sub-title {
+  display: inline-block;
+  font-size: 18px;
+  margin-left: 0.5vw;
+}
+.main-page-container section.types .types-inner .type-container .type-list-wrap > [class*=-list-wrap].active > ul[class*=-list-cards] > li[class*=-list-card] .text-box span.card-info {
+  font-size: 13px;
+  word-break: keep-all;
+}
+.main-page-container section.types .types-inner .type-container .type-list-wrap .area-list-wrap ul.area-list-cards li.area-list-card {
+  background-color: #7C1216;
+}
+.main-page-container section.types .types-inner .type-container .type-list-wrap .area-list-wrap button.more-btn {
+  position: relative;
+  padding: 1.5vh 7vh;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 40px;
+  border: none;
+  background-color: #222222;
+}
+.main-page-container section.types .types-inner .type-container .type-list-wrap .area-list-wrap button.more-btn span {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 500;
+}
+.main-page-container section.types .types-inner .type-container .type-list-wrap .modern-list-wrap ul.modern-list-cards li.modern-list-card {
+  background-color: #212447;
+}
+.main-page-container section.types .types-inner .type-container .type-list-wrap .modern-list-wrap button.more-btn {
+  position: relative;
+  padding: 1.5vh 7vh;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 40px;
+  border: none;
+  background-color: #222222;
+}
+.main-page-container section.types .types-inner .type-container .type-list-wrap .modern-list-wrap button.more-btn span {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 500;
 }
 .main-page-container section.unesco .unesco-inner {
   position: relative;
@@ -810,7 +864,7 @@ input {
 }
 .main-page-container section.unesco .unesco-inner .unesco-container .hero-section button.more-btn {
   position: relative;
-  padding: 2vh 6vh;
+  padding: 1.5vh 7vh;
   display: block;
   width: -moz-fit-content;
   width: fit-content;
@@ -821,13 +875,24 @@ input {
 .main-page-container section.unesco .unesco-inner .unesco-container .hero-section button.more-btn span {
   color: #FFFFFF;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .main-page-container section.unesco .unesco-inner .unesco-container .hero-section .hero-section-bg {
   position: absolute;
   top: 50%;
+  width: 50%;
+  height: 100%;
   transform: translateY(-50%);
-  opacity: 0.1;
+  opacity: 0.2;
+  -webkit-mask-image: url(../images/icon/unesco.png);
+          mask-image: url(../images/icon/unesco.png);
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center center;
+          mask-position: center center;
+  background-color: #BCA48A;
   z-index: -1;
 }
 .main-page-container section.unesco .unesco-inner .unesco-container .thum-section {
@@ -873,6 +938,32 @@ input {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.main-page-container section.unesco .unesco-inner .unesco-container .thum-section .main-thum img {
+  width: 120%;
+  left: -10%;
+}
+.main-page-container section.unesco .unesco-inner .unesco-container .thum-section .sub-thum {
+  background-color: #BCA48A;
+  border-radius: 50%;
+  padding-top: 48%;
+  z-index: 20;
+}
+.main-page-container section.unesco .unesco-inner .unesco-container .thum-section .sub-thum .ichh-logo {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-mask-image: url(../images/icon/ichh-logo.svg);
+          mask-image: url(../images/icon/ichh-logo.svg);
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center center;
+          mask-position: center center;
+  background-color: #FFFFFF;
+  z-index: 50;
 }
 .main-page-container section.content .content-inner {
   position: relative;
@@ -1012,7 +1103,7 @@ input {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  gap: 4vh;
+  gap: 2vh;
 }
 .main-page-container section.content .content-inner .content-right article.museum-info .content-info .museum-map {
   position: relative;
@@ -1029,12 +1120,13 @@ input {
 .main-page-container section.content .content-inner .content-right article.museum-info .content-info address.museum-overview {
   position: relative;
   display: block;
-  padding: 2% 4%;
-  height: 40%;
+  padding: 5% 4%;
+  height: 50%;
 }
 .main-page-container section.content .content-inner .content-right article.museum-info .content-info address.museum-overview dl {
   font-style: normal;
-  font-size: 18px;
+  font-size: 20px;
+  margin: 0;
 }
 .main-page-container section.content .content-inner .content-right article.museum-info .content-info address.museum-overview dl dt {
   font-weight: 800;

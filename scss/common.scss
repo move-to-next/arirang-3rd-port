@@ -98,7 +98,7 @@ img{
 }
 @mixin more-btn{
     position: relative;
-    padding: 2vh 6vh;
+    padding: 1.5vh 7vh;
     display: block;
     width: fit-content;
     border-radius: 40px;
@@ -108,7 +108,7 @@ img{
         
         color: vars.$white;
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 500;
     }
 }
 @mixin title{
