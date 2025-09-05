@@ -1,12 +1,496 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>우리만의 소리 아리랑</title>
-	<link rel="stylesheet" href="./css/type-arirang.css">
+    <link rel="shortcut icon" href="/arirang-3rd-port/images/logo/arirang-logo-fill-w.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/type-arirang.css">
 </head>
+
 <body>
-    
+    <!-- HEADER -->
+    <!-- <div data-include-path="../include/header.html"></div> -->
+    <!-- MAIN CONTAINER -->
+    <div class="type-arirang-container">
+        <section class="top-banner">
+            <div class="top-banner-inner">
+                <div class="title-section">
+                    <span class="sub-title">전국 각지에서 피어난 아리랑의 향기</span>
+                    <span class="main-title">지역의 아리랑</span>
+                </div>
+            </div>
+        </section>
+        <section class="type-content">
+            <div class="type-content-inner">
+                <div class="tab-btns">
+                    <button class="tab-btn active">
+                        <span>경기아리랑</span>
+                    </button>
+                    <button class="tab-btn">
+                        <span>밀양아리랑</span>
+                    </button>
+                    <button class="tab-btn">
+                        <span>강원도아리랑</span>
+                    </button>
+                    <button class="tab-btn">
+                        <span>정선아리랑</span>
+                    </button>
+                    <button class="tab-btn">
+                        <span>진도아리랑</span>
+                    </button>
+                    <button class="tab-btn">
+                        <span>영천아리랑</span>
+                    </button>
+                    <button class="tab-btn">
+                        <span>상주아리랑</span>
+                    </button>
+                </div>
+                <div class="type-arirang-items">
+                    <div class="type-arirang-item active">
+                        <div class="hero-section">
+                            <h2 class="main-title">경기아리랑</h2>
+                            <p class="sub-title">20세기 이후에 주로 불리고 있는 경기도 지역의 아리랑</p>
+                            <div class="arirang-info">
+                                <span>경기아리랑은 20세기 이후에 주로 불리는 경기도 지역을 중심으로 한 아리랑으로,
+                                    구한말에 지금의 형태로 정형화된 노래입니다.</span>
+                                <span>경기아리랑의 본류인 ‘구조아리랑’은 경복궁 중건 때 불리던 아리랑으로,대원군이 궁궐 건축을 위해 백성들에게 원납전을 거둬들이자 가혹한 조세 부담에
+                                    힘겨운 백성들이 구조아리랑을 불렀습니다.</span>
+                                <span>경기아리랑은 1926년 나운규 감독이 제작한 영화 &#60;아리랑&#62;을 통해 본격적으로 확산됐습니다. 영화 속의 아리랑 가락은 식민지 시대를
+                                    사는 우리 민족이 울분을 토로할 수 있는 통로를 마련해줬습니다.</span>
+                                <span>경기아리랑은 전통 민요에서 근대적 대중가요로 발전하는 과정을 보여주는 대표적인 사례이자, 현재 가장 널리 알려진 아리랑의 형태입니다.</span>
+                            </div>
+                        </div>
+                        <div class="action-section">
+                            <div class="thum">
+                                <img src="../images/arirang-singing-4.jpg" alt="경기아리랑 참고이미지">
+                            </div>
+                            <div class="action-btns">
+                                <audio controls loop>
+                                    <source src="../sound/kyoungki-arirang.mp3">
+                                </audio>
+                                <button class="play-btn">
+                                    <img src="../images/icon/play-circle-fill.svg" alt="시작 아이콘">
+                                    <span>시작</span>
+                                </button>
+                                <button class="stop-btn">
+                                    <img src="../images/icon/stop-circle-fill.svg" alt="정지 아이콘">
+                                    <span>정지</span>
+                                </button>
+                                <button class="info-btn"
+                                    onclick="window.open('https://namu.wiki/w/%EC%95%84%EB%A6%AC%EB%9E%91#s-3.1')">
+                                    <img src="../images/icon/info-circle-fill.svg" alt="자세한 정보 아이콘">
+                                    <span>정보</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-arirang-item">
+                        <div class="hero-section">
+                            <h2 class="main-title">밀양아리랑</h2>
+                            <p class="sub-title">밀양지역을 중심으로한 경남지역의 향토민요</p>
+                            <div class="arirang-info">
+                                <span>밀양아리랑은 경상남도 밀양 지역에서 전해지는 민요로, 밀양의 지명이나 풍경이 자주 등장하며 현재 정선아리랑, 진도아리랑과 함께 한국의 3대아리랑의 하나로 경상도 민요를 대표하고 있습니다.</span>
+                                <span>일반적인 아리랑보다 더 구성지고 애절한 느낌이며, 느린 템포의 서정적인 곡조 리듬이 특징입니다. 박자는 3소박 3박자로 된 9/8박자의 세마치장단으로 이루어져 있습니다.</span>
+                                <span>밀양아리랑은 "아리아리랑 쓰리쓰리랑 아라리가 났네" 후렴구를 사용하여, 누구나 쉽게 부를 수 있는 장점으로 인해 시대별로 변용되어 오늘에 이릅니다.</span>
+                                <span>밀양 지역에서는 매년 개최되는 밀양아리랑대축제를 비롯해 밀양아리랑보존회, 밀양아리랑콘텐츠사업단이 결성되어 밀양아리랑체조, 밀양아리랑플래시몹 등을
+                                    개발하는 등 전승과 보존에 노력하고 있습니다.</span>
+                            </div>
+                        </div>
+                        <div class="action-section">
+                            <div class="thum">
+                                <img src="../images/arirang-singing-10.jpg" alt="경기아리랑 참고이미지">
+                            </div>
+                            <div class="action-btns">
+                                <audio controls loop>
+                                    <source src="../sound/milyang-arirang.wav">
+                                </audio>
+                                <button class="play-btn">
+                                    <img src="../images/icon/play-circle-fill.svg" alt="시작 아이콘">
+                                    <span>시작</span>
+                                </button>
+                                <button class="stop-btn">
+                                    <img src="../images/icon/stop-circle-fill.svg" alt="정지 아이콘">
+                                    <span>정지</span>
+                                </button>
+                                <button class="info-btn"
+                                    onclick="window.open('https://namu.wiki/w/%EC%95%84%EB%A6%AC%EB%9E%91#s-3.2')">
+                                    <img src="../images/icon/info-circle-fill.svg" alt="자세한 정보 아이콘">
+                                    <span>정보</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 강원도 아리랑부터 -->
+                    <div class="type-arirang-item">
+                        <div class="hero-section">
+                            <h2 class="main-title">경기아리랑</h2>
+                            <p class="sub-title">20세기 이후에 주로 불리고 있는 경기도 지역의 아리랑</p>
+                            <div class="arirang-info">
+                                <span>경기아리랑은 20세기 이후에 주로 불리는 경기도 지역을 중심으로 한 아리랑으로,
+                                    구한말에 지금의 형태로 정형화된 노래입니다.</span>
+                                <span>경기아리랑의 본류인 ‘구조아리랑’은 경복궁 중건 때 불리던 아리랑으로,대원군이 궁궐 건축을 위해 백성들에게 원납전을 거둬들이자 가혹한 조세 부담에
+                                    힘겨운 백성들이 구조아리랑을 불렀습니다.</span>
+                                <span>경기아리랑은 1926년 나운규 감독이 제작한 영화 &#60;아리랑&#62;을 통해 본격적으로 확산됐습니다. 영화 속의 아리랑 가락은 식민지 시대를
+                                    사는 우리 민족이 울분을 토로할 수 있는 통로를 마련해줬습니다.</span>
+                                <span>경기아리랑은 전통 민요에서 근대적 대중가요로 발전하는 과정을 보여주는 대표적인 사례이자, 현재 가장 널리 알려진 아리랑의 형태입니다.</span>
+                            </div>
+                        </div>
+                        <div class="action-section">
+                            <div class="thum">
+                                <img src="../images/arirang-singing-4.jpg" alt="경기아리랑 참고이미지">
+                            </div>
+                            <div class="action-btns">
+                                <audio controls loop>
+                                    <source src="../sound/kyoungki-arirang.mp3">
+                                </audio>
+                                <button class="play-btn">
+                                    <img src="../images/icon/play-circle-fill.svg" alt="시작 아이콘">
+                                    <span>시작</span>
+                                </button>
+                                <button class="stop-btn">
+                                    <img src="../images/icon/stop-circle-fill.svg" alt="정지 아이콘">
+                                    <span>정지</span>
+                                </button>
+                                <button class="info-btn"
+                                    onclick="window.open('https://namu.wiki/w/%EC%95%84%EB%A6%AC%EB%9E%91#s-3.1')">
+                                    <img src="../images/icon/info-circle-fill.svg" alt="자세한 정보 아이콘">
+                                    <span>정보</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-arirang-item">
+                        <div class="hero-section">
+                            <h2 class="main-title">경기아리랑</h2>
+                            <p class="sub-title">20세기 이후에 주로 불리고 있는 경기도 지역의 아리랑</p>
+                            <div class="arirang-info">
+                                <span>경기아리랑은 20세기 이후에 주로 불리는 경기도 지역을 중심으로 한 아리랑으로,
+                                    구한말에 지금의 형태로 정형화된 노래입니다.</span>
+                                <span>경기아리랑의 본류인 ‘구조아리랑’은 경복궁 중건 때 불리던 아리랑으로,대원군이 궁궐 건축을 위해 백성들에게 원납전을 거둬들이자 가혹한 조세 부담에
+                                    힘겨운 백성들이 구조아리랑을 불렀습니다.</span>
+                                <span>경기아리랑은 1926년 나운규 감독이 제작한 영화 &#60;아리랑&#62;을 통해 본격적으로 확산됐습니다. 영화 속의 아리랑 가락은 식민지 시대를
+                                    사는 우리 민족이 울분을 토로할 수 있는 통로를 마련해줬습니다.</span>
+                                <span>경기아리랑은 전통 민요에서 근대적 대중가요로 발전하는 과정을 보여주는 대표적인 사례이자, 현재 가장 널리 알려진 아리랑의 형태입니다.</span>
+                            </div>
+                        </div>
+                        <div class="action-section">
+                            <div class="thum">
+                                <img src="../images/arirang-singing-4.jpg" alt="경기아리랑 참고이미지">
+                            </div>
+                            <div class="action-btns">
+                                <audio controls loop>
+                                    <source src="../sound/kyoungki-arirang.mp3">
+                                </audio>
+                                <button class="play-btn">
+                                    <img src="../images/icon/play-circle-fill.svg" alt="시작 아이콘">
+                                    <span>시작</span>
+                                </button>
+                                <button class="stop-btn">
+                                    <img src="../images/icon/stop-circle-fill.svg" alt="정지 아이콘">
+                                    <span>정지</span>
+                                </button>
+                                <button class="info-btn"
+                                    onclick="window.open('https://namu.wiki/w/%EC%95%84%EB%A6%AC%EB%9E%91#s-3.1')">
+                                    <img src="../images/icon/info-circle-fill.svg" alt="자세한 정보 아이콘">
+                                    <span>정보</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-arirang-item">
+                        <div class="hero-section">
+                            <h2 class="main-title">경기아리랑</h2>
+                            <p class="sub-title">20세기 이후에 주로 불리고 있는 경기도 지역의 아리랑</p>
+                            <div class="arirang-info">
+                                <span>경기아리랑은 20세기 이후에 주로 불리는 경기도 지역을 중심으로 한 아리랑으로,
+                                    구한말에 지금의 형태로 정형화된 노래입니다.</span>
+                                <span>경기아리랑의 본류인 ‘구조아리랑’은 경복궁 중건 때 불리던 아리랑으로,대원군이 궁궐 건축을 위해 백성들에게 원납전을 거둬들이자 가혹한 조세 부담에
+                                    힘겨운 백성들이 구조아리랑을 불렀습니다.</span>
+                                <span>경기아리랑은 1926년 나운규 감독이 제작한 영화 &#60;아리랑&#62;을 통해 본격적으로 확산됐습니다. 영화 속의 아리랑 가락은 식민지 시대를
+                                    사는 우리 민족이 울분을 토로할 수 있는 통로를 마련해줬습니다.</span>
+                                <span>경기아리랑은 전통 민요에서 근대적 대중가요로 발전하는 과정을 보여주는 대표적인 사례이자, 현재 가장 널리 알려진 아리랑의 형태입니다.</span>
+                            </div>
+                        </div>
+                        <div class="action-section">
+                            <div class="thum">
+                                <img src="../images/arirang-singing-4.jpg" alt="경기아리랑 참고이미지">
+                            </div>
+                            <div class="action-btns">
+                                <audio controls loop>
+                                    <source src="../sound/kyoungki-arirang.mp3">
+                                </audio>
+                                <button class="play-btn">
+                                    <img src="../images/icon/play-circle-fill.svg" alt="시작 아이콘">
+                                    <span>시작</span>
+                                </button>
+                                <button class="stop-btn">
+                                    <img src="../images/icon/stop-circle-fill.svg" alt="정지 아이콘">
+                                    <span>정지</span>
+                                </button>
+                                <button class="info-btn"
+                                    onclick="window.open('https://namu.wiki/w/%EC%95%84%EB%A6%AC%EB%9E%91#s-3.1')">
+                                    <img src="../images/icon/info-circle-fill.svg" alt="자세한 정보 아이콘">
+                                    <span>정보</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-arirang-item">
+                        <div class="hero-section">
+                            <h2 class="main-title">경기아리랑</h2>
+                            <p class="sub-title">20세기 이후에 주로 불리고 있는 경기도 지역의 아리랑</p>
+                            <div class="arirang-info">
+                                <span>경기아리랑은 20세기 이후에 주로 불리는 경기도 지역을 중심으로 한 아리랑으로,
+                                    구한말에 지금의 형태로 정형화된 노래입니다.</span>
+                                <span>경기아리랑의 본류인 ‘구조아리랑’은 경복궁 중건 때 불리던 아리랑으로,대원군이 궁궐 건축을 위해 백성들에게 원납전을 거둬들이자 가혹한 조세 부담에
+                                    힘겨운 백성들이 구조아리랑을 불렀습니다.</span>
+                                <span>경기아리랑은 1926년 나운규 감독이 제작한 영화 &#60;아리랑&#62;을 통해 본격적으로 확산됐습니다. 영화 속의 아리랑 가락은 식민지 시대를
+                                    사는 우리 민족이 울분을 토로할 수 있는 통로를 마련해줬습니다.</span>
+                                <span>경기아리랑은 전통 민요에서 근대적 대중가요로 발전하는 과정을 보여주는 대표적인 사례이자, 현재 가장 널리 알려진 아리랑의 형태입니다.</span>
+                            </div>
+                        </div>
+                        <div class="action-section">
+                            <div class="thum">
+                                <img src="../images/arirang-singing-4.jpg" alt="경기아리랑 참고이미지">
+                            </div>
+                            <div class="action-btns">
+                                <audio controls loop>
+                                    <source src="../sound/kyoungki-arirang.mp3">
+                                </audio>
+                                <button class="play-btn">
+                                    <img src="../images/icon/play-circle-fill.svg" alt="시작 아이콘">
+                                    <span>시작</span>
+                                </button>
+                                <button class="stop-btn">
+                                    <img src="../images/icon/stop-circle-fill.svg" alt="정지 아이콘">
+                                    <span>정지</span>
+                                </button>
+                                <button class="info-btn"
+                                    onclick="window.open('https://namu.wiki/w/%EC%95%84%EB%A6%AC%EB%9E%91#s-3.1')">
+                                    <img src="../images/icon/info-circle-fill.svg" alt="자세한 정보 아이콘">
+                                    <span>정보</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-arirang-item">
+                        <div class="hero-section">
+                            <h2 class="main-title">경기아리랑</h2>
+                            <p class="sub-title">20세기 이후에 주로 불리고 있는 경기도 지역의 아리랑</p>
+                            <div class="arirang-info">
+                                <span>경기아리랑은 20세기 이후에 주로 불리는 경기도 지역을 중심으로 한 아리랑으로,
+                                    구한말에 지금의 형태로 정형화된 노래입니다.</span>
+                                <span>경기아리랑의 본류인 ‘구조아리랑’은 경복궁 중건 때 불리던 아리랑으로,대원군이 궁궐 건축을 위해 백성들에게 원납전을 거둬들이자 가혹한 조세 부담에
+                                    힘겨운 백성들이 구조아리랑을 불렀습니다.</span>
+                                <span>경기아리랑은 1926년 나운규 감독이 제작한 영화 &#60;아리랑&#62;을 통해 본격적으로 확산됐습니다. 영화 속의 아리랑 가락은 식민지 시대를
+                                    사는 우리 민족이 울분을 토로할 수 있는 통로를 마련해줬습니다.</span>
+                                <span>경기아리랑은 전통 민요에서 근대적 대중가요로 발전하는 과정을 보여주는 대표적인 사례이자, 현재 가장 널리 알려진 아리랑의 형태입니다.</span>
+                            </div>
+                        </div>
+                        <div class="action-section">
+                            <div class="thum">
+                                <img src="../images/arirang-singing-4.jpg" alt="경기아리랑 참고이미지">
+                            </div>
+                            <div class="action-btns">
+                                <audio controls loop>
+                                    <source src="../sound/kyoungki-arirang.mp3">
+                                </audio>
+                                <button class="play-btn">
+                                    <img src="../images/icon/play-circle-fill.svg" alt="시작 아이콘">
+                                    <span>시작</span>
+                                </button>
+                                <button class="stop-btn">
+                                    <img src="../images/icon/stop-circle-fill.svg" alt="정지 아이콘">
+                                    <span>정지</span>
+                                </button>
+                                <button class="info-btn"
+                                    onclick="window.open('https://namu.wiki/w/%EC%95%84%EB%A6%AC%EB%9E%91#s-3.1')">
+                                    <img src="../images/icon/info-circle-fill.svg" alt="자세한 정보 아이콘">
+                                    <span>정보</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="type-arirang-videos">
+                    <div class="type-arirang-video active">
+                        <h3 class="title">유튜브 링크</h3>
+                        <div class="video-cards">
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-1.jpg" alt="경기아리랑 유튜브 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/Gybpfe9OsnY?si=ZCuC5oi7O1hNo93c&amp;start=51"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-2.jpg" alt="열린음악회 송소희 경기아리랑 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe src="https://www.youtube.com/embed/hKFxLkcqEpI?si=nTqAtGT7Xl3rULDE"
+                                        title="YouTube video player" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 밀양아리랑부터 -->
+                    <div class="type-arirang-video">
+                        <h3 class="title">유튜브 링크</h3>
+                        <div class="video-cards">
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-1.jpg" alt="경기아리랑 유튜브 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/Gybpfe9OsnY?si=ZCuC5oi7O1hNo93c&amp;start=51"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-2.jpg" alt="열린음악회 송소희 경기아리랑 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe src="https://www.youtube.com/embed/hKFxLkcqEpI?si=nTqAtGT7Xl3rULDE"
+                                        title="YouTube video player" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-arirang-video">
+                        <h3 class="title">유튜브 링크</h3>
+                        <div class="video-cards">
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-1.jpg" alt="경기아리랑 유튜브 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/Gybpfe9OsnY?si=ZCuC5oi7O1hNo93c&amp;start=51"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-2.jpg" alt="열린음악회 송소희 경기아리랑 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe src="https://www.youtube.com/embed/hKFxLkcqEpI?si=nTqAtGT7Xl3rULDE"
+                                        title="YouTube video player" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-arirang-video">
+                        <h3 class="title">유튜브 링크</h3>
+                        <div class="video-cards">
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-1.jpg" alt="경기아리랑 유튜브 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/Gybpfe9OsnY?si=ZCuC5oi7O1hNo93c&amp;start=51"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-2.jpg" alt="열린음악회 송소희 경기아리랑 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe src="https://www.youtube.com/embed/hKFxLkcqEpI?si=nTqAtGT7Xl3rULDE"
+                                        title="YouTube video player" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-arirang-video">
+                        <h3 class="title">유튜브 링크</h3>
+                        <div class="video-cards">
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-1.jpg" alt="경기아리랑 유튜브 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/Gybpfe9OsnY?si=ZCuC5oi7O1hNo93c&amp;start=51"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-2.jpg" alt="열린음악회 송소희 경기아리랑 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe src="https://www.youtube.com/embed/hKFxLkcqEpI?si=nTqAtGT7Xl3rULDE"
+                                        title="YouTube video player" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-arirang-video">
+                        <h3 class="title">유튜브 링크</h3>
+                        <div class="video-cards">
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-1.jpg" alt="경기아리랑 유튜브 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/Gybpfe9OsnY?si=ZCuC5oi7O1hNo93c&amp;start=51"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-2.jpg" alt="열린음악회 송소희 경기아리랑 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe src="https://www.youtube.com/embed/hKFxLkcqEpI?si=nTqAtGT7Xl3rULDE"
+                                        title="YouTube video player" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="type-arirang-video">
+                        <h3 class="title">유튜브 링크</h3>
+                        <div class="video-cards">
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-1.jpg" alt="경기아리랑 유튜브 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe
+                                        src="https://www.youtube.com/embed/Gybpfe9OsnY?si=ZCuC5oi7O1hNo93c&amp;start=51"
+                                        frameborder="0"></iframe>
+                                </div>
+                            </div>
+                            <div class="video-card">
+                                <div class="video-thum active">
+                                    <img src="../images/ytb-thum/kyoungki-arirang-2.jpg" alt="열린음악회 송소희 경기아리랑 자료">
+                                </div>
+                                <div class="video-youtube">
+                                    <iframe src="https://www.youtube.com/embed/hKFxLkcqEpI?si=nTqAtGT7Xl3rULDE"
+                                        title="YouTube video player" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="../script/main-page.js"></script>
+    <!-- FOOTER -->
+    <!-- <div data-include-path="../include/footer.html"></div> -->
 </body>
+
 </html>

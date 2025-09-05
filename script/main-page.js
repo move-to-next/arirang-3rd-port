@@ -1,4 +1,4 @@
-// INCLUDE FILES
+// HEADER, FOOTER INCLUDE
 // 이벤트 리스너 - 페이지 로드 완료 감지
 window.addEventListener('load', async function(){
     // CSS 선택자 - 특정 속성을 가진 요소들 찾기

@@ -2,55 +2,6 @@
 @import url("//fonts.googleapis.com/earlyaccess/nanummyeongjo.css");
 @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("//fonts.googleapis.com/earlyaccess/nanummyeongjo.css");
-@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("//fonts.googleapis.com/earlyaccess/nanummyeongjo.css");
-@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-@font-face {
-  font-family: "JeongseonArirangHon";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSArirangHON-RegularA1.woff") format("woff");
-  font-weight: normal;
-  font-display: swap;
-}
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: 500;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  cursor: pointer;
-}
-
-input {
-  border: none;
-}
-
-.hide {
-  display: block;
-  width: 1px;
-  height: 1px;
-  font-size: 1px;
-  text-indent: -9999em;
-}
-
 @font-face {
   font-family: "JeongseonArirangHon";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSArirangHON-RegularA1.woff") format("woff");
@@ -259,11 +210,319 @@ footer .footer-inner .footer-actions .sns-links > * img {
   opacity: 0.5;
 }
 
-@font-face {
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 500;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  border: none;
+}
+
+.hide {
+  display: block;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  text-indent: -9999em;
+}
+
+.type-arirang-container section.top-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #F3EEDE;
+}
+.type-arirang-container section.top-banner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/top-bg-2.jpg);
+  background-position: center 70%;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: 0;
+}
+.type-arirang-container section.top-banner .top-banner-inner {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 50;
+}
+.type-arirang-container section.top-banner .top-banner-inner .title-section {
+  display: flex;
+  flex-direction: column;
   font-family: "JeongseonArirangHon";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSArirangHON-RegularA1.woff") format("woff");
-  font-weight: normal;
-  font-display: swap;
+  z-index: 20;
+  user-select: none;
+}
+.type-arirang-container section.top-banner .top-banner-inner .title-section span.sub-title {
+  font-size: 3em;
+}
+.type-arirang-container section.top-banner .top-banner-inner .title-section span.main-title {
+  font-size: 6em;
+  line-height: 1.5em;
+}
+.type-arirang-container section.type-content {
+  position: relative;
+  width: 100%;
+  background-color: #F3EEDE;
+}
+.type-arirang-container section.type-content .type-content-inner {
+  position: relative;
+  padding: 10vh 12vw;
+}
+.type-arirang-container section.type-content .type-content-inner .tab-btns {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+}
+.type-arirang-container section.type-content .type-content-inner .tab-btns button.tab-btn {
+  flex: 1;
+  padding: 14px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(188, 164, 138, 0.2);
+}
+.type-arirang-container section.type-content .type-content-inner .tab-btns button.tab-btn span {
+  color: #777777;
+  font-size: 24px;
+}
+.type-arirang-container section.type-content .type-content-inner .tab-btns button.tab-btn.active {
+  background-color: #7C1216;
+}
+.type-arirang-container section.type-content .type-content-inner .tab-btns button.tab-btn.active span {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items {
+  position: relative;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item {
+  position: relative;
+  display: none;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .hero-section h2.main-title {
+  position: relative;
+  display: block;
+  width: fit-content;
+  font-size: 56px;
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 800;
+  letter-spacing: -2px;
+  z-index: 30;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .hero-section h2.main-title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  left: 0;
+  bottom: 0;
+  display: block;
+  background-color: #BCA48A;
+  z-index: -1;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .hero-section p.sub-title {
+  font-size: 32px;
+  font-family: "Nanum Myeongjo", serif;
+  font-weight: 800;
+  line-height: 30px;
+  letter-spacing: -2px;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .hero-section p.sub-title {
+  margin: 2vh 0 4vh;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .hero-section .arirang-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  max-width: 32vw;
+  margin-top: auto;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .hero-section .arirang-info span {
+  font-size: 16px;
+  line-height: 24px;
+  word-break: keep-all;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .action-section .thum {
+  position: relative;
+  min-width: 25vw;
+  padding-top: 70%;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  overflow: hidden;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .action-section .thum img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .action-section .action-btns {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .action-section .action-btns audio {
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .action-section .action-btns audio source {
+  margin: -1px;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .action-section .action-btns button {
+  width: fit-content;
+  padding: 1vh 0;
+  border: none;
+  margin-top: 2vh;
+  background-color: transparent;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .action-section .action-btns button img {
+  display: inline-block;
+  width: 40%;
+  vertical-align: middle;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-items .type-arirang-item.active .action-section .action-btns button span {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 10px;
+  margin-left: 10px;
+  transform: translateY(4px);
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos {
+  position: relative;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video {
+  display: none;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active h3.title {
+  position: relative;
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active h3.title::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  top: 50%;
+  right: 0;
+  width: 85%;
+  height: fit-content;
+  border-bottom: 1px solid #222222;
+  transform: translateY(-50%);
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active .video-cards {
+  display: flex;
+  gap: 1vw;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active .video-cards .video-card {
+  position: relative;
+  flex: 1;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active .video-cards .video-card .video-thum {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active .video-cards .video-card .video-thum.active {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 50%;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #222222;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active .video-cards .video-card .video-thum.active::after {
+  content: "\f4f2";
+  position: absolute;
+  display: inline-block;
+  font-family: bootstrap-icons;
+  font-size: 4em;
+  color: #FFFFFF;
+  user-select: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active .video-cards .video-card .video-thum.active img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active .video-cards .video-card .video-youtube {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active .video-cards .video-card .video-youtube.active {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 50%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.type-arirang-container section.type-content .type-content-inner .type-arirang-videos .type-arirang-video.active .video-cards .video-card .video-youtube.active iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=type-arirang.css.map */

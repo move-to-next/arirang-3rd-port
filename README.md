@@ -9,6 +9,7 @@
 - 추후 Dart Sass 3.0.0 릴리스 되면 @import가 삭제될 수 있음.(@use, @forward 규칙사용 권장)
 - @import는 변수/함수등이 전역으로 섞여서 어떤파일의 어떤변수인지 출처를 파악하기 어렵지만
 - @use..as를 사용하여 네임스페이스의 충돌을 방지하고 명확하게 변수를 가져올수있어 코드가독성과 유지보수가 쉽다.
+
 ### 사용예시
 @use "variables" as vars; // variables.scss라는 파일을 vars라는 네임스페이스로 가져옴.
 @use "common"; // common.scss라는 파일을 가져오고 파일자체가 네임스페이스가 된다.
@@ -19,3 +20,8 @@ color: vars.$black;
 @use "common";
 @include common.button-style; (common.scss에 있는 믹스인 가져옴.)
 color: common.$black; (common.scss에 있는 변수 가져옴.)
+
+### GRID를 활용하는 이유
+- 2차원 레이아웃 제어로 행,열 두가지 방향을 동시에 사용할 수 있어 보다 더 정교한 배치가 가능하다.
+- fr단위와 minmax()함수사용으로 자동으로 조절을 할 수 있어 반응형 스타일링을 좀 더 간단하게 할 수 있다.
+- grid-template-areas 사용으로 직관적인 레이아웃 설계가 가능하다.
