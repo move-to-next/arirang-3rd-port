@@ -9,18 +9,7 @@
         height: 100vh;
         background-color: vars.$sand;
         &::after{
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url(../images/top-bg-2.jpg);
-            background-position: center 70%;
-            background-size: cover;
-            opacity: 0.4;
-            z-index: 0;
+            @include common.top-banner-after;
         }
         .top-banner-inner{
             position: absolute;
@@ -160,22 +149,7 @@
                         flex-direction: column;
                         gap: 4vh;
                         h3.title{
-                            position: relative;
-                            font-family: vars.$Kor-head;
-                            font-size: 32px;
-                            font-weight: 700;
-                            &::after{
-                                content: '';
-                                position: absolute;
-                                display: inline-block;
-                                vertical-align: middle;
-                                top: 50%;
-                                right: 0;
-                                width: 85%;
-                                height: fit-content;
-                                border-bottom: 1px solid vars.$black;
-                                transform: translateY(-50%);
-                            }
+                            @include common.video-title;
                         }
                         .video-cards{
                             display: flex;
