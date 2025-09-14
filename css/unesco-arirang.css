@@ -248,16 +248,16 @@ input {
   text-indent: -9999em;
 }
 
-.modern-arirang-container section {
+.unesco-heritage-container section {
   background-color: #F3EEDE;
 }
-.modern-arirang-container section.top-banner {
+.unesco-heritage-container section.top-banner {
   position: relative;
   width: 100%;
   height: 100vh;
   background-color: #F3EEDE;
 }
-.modern-arirang-container section.top-banner::after {
+.unesco-heritage-container section.top-banner::after {
   content: "";
   display: block;
   position: absolute;
@@ -270,15 +270,16 @@ input {
   background-size: cover;
   opacity: 0.4;
   z-index: 0;
+  background-position: center 95%;
 }
-.modern-arirang-container section.top-banner .top-banner-inner {
+.unesco-heritage-container section.top-banner .top-banner-inner {
   position: absolute;
   top: 55%;
   transform: translateY(-50%);
   width: 100%;
   z-index: 50;
 }
-.modern-arirang-container section.top-banner .top-banner-inner .title-section {
+.unesco-heritage-container section.top-banner .top-banner-inner .title-section {
   display: flex;
   flex-direction: column;
   font-family: "JeongseonArirangHon";
@@ -287,113 +288,169 @@ input {
      -moz-user-select: none;
           user-select: none;
 }
-.modern-arirang-container section.top-banner .top-banner-inner .title-section span.sub-title {
+.unesco-heritage-container section.top-banner .top-banner-inner .title-section span.sub-title {
   font-size: 3em;
 }
-.modern-arirang-container section.top-banner .top-banner-inner .title-section span.main-title {
+.unesco-heritage-container section.top-banner .top-banner-inner .title-section span.main-title {
   font-size: 6em;
   line-height: 1.5em;
 }
-.modern-arirang-container section[class*=-arirang] [class*=-inner] {
-  margin: 0;
-  gap: 4vh;
-  padding: 5vh 12vw;
+.unesco-heritage-container section.heritage-story .heritage-story-inner {
+  flex-direction: row;
+  padding: 10vh 12vw;
 }
-.modern-arirang-container section[class*=-arirang] [class*=-inner] h3.title {
-  position: relative;
-  font-family: "Nanum Myeongjo", serif;
-  font-size: 32px;
-  font-weight: 700;
+.unesco-heritage-container section.heritage-story .heritage-story-inner .info-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  justify-content: space-between;
 }
-.modern-arirang-container section[class*=-arirang] [class*=-inner] h3.title::after {
-  content: "";
-  position: absolute;
+.unesco-heritage-container section.heritage-story .heritage-story-inner .info-section .date-location {
+  display: flex;
+  align-items: flex-end;
+}
+.unesco-heritage-container section.heritage-story .heritage-story-inner .info-section .date-location span.date {
   display: inline-block;
-  vertical-align: middle;
-  top: 50%;
-  right: 0;
-  width: 85%;
-  height: -moz-fit-content;
-  height: fit-content;
-  border-bottom: 1px solid #222222;
-  transform: translateY(-50%);
+  font-size: 65px;
+  line-height: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #222222;
+  margin-right: 20px;
 }
-.modern-arirang-container section[class*=-arirang] [class*=-inner] .video-cards {
+.unesco-heritage-container section.heritage-story .heritage-story-inner .info-section .date-location span.location {
+  display: inline-block;
+  font-size: 35px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #774E35;
+  border-bottom: 2px solid #774E35;
+}
+.unesco-heritage-container section.heritage-story .heritage-story-inner .info-section .date-location span.location em {
+  font-style: normal;
+  font-weight: 800;
+}
+.unesco-heritage-container section.heritage-story .heritage-story-inner .info-section p.info-text {
+  font-size: 32px;
+  line-height: 48px;
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 0;
+}
+.unesco-heritage-container section.heritage-story .heritage-story-inner .info-section p.info-text span {
+  font-style: normal;
+  font-weight: 800;
+  color: #774E35;
+}
+.unesco-heritage-container section.heritage-story .heritage-story-inner .info-section .link-btns {
   display: flex;
   gap: 1vw;
 }
-.modern-arirang-container section[class*=-arirang] [class*=-inner] .video-cards .video-card {
-  position: relative;
-  flex: 1;
-}
-.modern-arirang-container section[class*=-arirang] [class*=-inner] .video-cards .video-card .video-thum {
-  position: absolute;
-  top: 0;
-  display: none;
-}
-.modern-arirang-container section[class*=-arirang] [class*=-inner] .video-cards .video-card .video-thum.active {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding-top: 50%;
-  border-radius: 10px;
-  overflow: hidden;
+.unesco-heritage-container section.heritage-story .heritage-story-inner .info-section .link-btns > [class*=-btn] {
+  padding: 1.5vh 3vw;
+  border: 1px solid #222222;
+  border-radius: 50px;
   cursor: pointer;
-  background-color: #222222;
 }
-.modern-arirang-container section[class*=-arirang] [class*=-inner] .video-cards .video-card .video-thum.active::after {
-  content: "\f4f2";
-  position: absolute;
+.unesco-heritage-container section.heritage-story .heritage-story-inner .info-section .link-btns > [class*=-btn] img {
+  transform: translateY(3px);
+}
+.unesco-heritage-container section.heritage-story .heritage-story-inner .info-section .link-btns > [class*=-btn] span {
   display: inline-block;
-  font-family: bootstrap-icons;
-  font-size: 4em;
-  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 12px;
+  font-weight: 600;
+  margin-left: 8px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 50;
 }
-.modern-arirang-container section[class*=-arirang] [class*=-inner] .video-cards .video-card .video-thum.active img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0.5;
-}
-.modern-arirang-container section[class*=-arirang] [class*=-inner] .video-cards .video-card .video-youtube {
-  position: absolute;
-  top: 0;
-  display: none;
-}
-.modern-arirang-container section[class*=-arirang] [class*=-inner] .video-cards .video-card .video-youtube.active {
+.unesco-heritage-container section.heritage-story .heritage-story-inner .simbol-section {
   position: relative;
-  display: block;
-  width: 100%;
-  padding-top: 50%;
-  border-radius: 10px;
-  overflow: hidden;
+  width: 30%;
 }
-.modern-arirang-container section[class*=-arirang] [class*=-inner] .video-cards .video-card .video-youtube.active iframe {
+.unesco-heritage-container section.heritage-story .heritage-story-inner .simbol-section .simbol {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0%;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -webkit-mask-image: url(../images/icon/unesco.png);
+          mask-image: url(../images/icon/unesco.png);
+  -webkit-mask-position: center center;
+          mask-position: center center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  background-color: #774E35;
+  opacity: 0.2;
 }
-.modern-arirang-container section[class*=-arirang] [class*=-inner] .video-cards .video-card p {
-  font-size: 24px;
-  font-weight: 600;
-  font-family: "Nanum Myeongjo", serif;
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner {
+  padding: 10vh 12vw;
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .heritage-reason {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .heritage-reason .title-area {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline-block;
+  border-bottom: 2px solid rgba(119, 78, 53, 0.4);
+  font-family: "Nanum Gothic", sans-serif;
+  color: #222222;
+  letter-spacing: -1px;
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .heritage-reason .title-area span.tag {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .heritage-reason .title-area h2 {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 800;
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .heritage-reason .text-area {
+  width: 60%;
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .heritage-reason .text-area p.description {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  margin: 0;
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .heritage-reason .text-area p.description span.description-info {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 34px;
+  letter-spacing: -1px;
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .heritage-reason .text-area p.description span.description-info em.source {
+  font-style: normal;
+  font-size: 12px;
+}
+.unesco-heritage-container section.arirang-slogan {
+  background-color: #F3EEDE;
+}
+.unesco-heritage-container section.arirang-slogan p.slogan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+  width: 60%;
+  margin: 0 auto;
   text-align: center;
+  font-size: 36px;
 }
-.modern-arirang-container section[class*=-arirang].militery-arirang [class*=-inner] {
-  margin-top: 10vh;
+.unesco-heritage-container section.arirang-slogan p.slogan span {
+  letter-spacing: -1px;
+}
+.unesco-heritage-container section.arirang-slogan p.slogan span em.slogan-point {
+  font-style: normal;
+  font-weight: 700;
+  color: #774E35;
 }

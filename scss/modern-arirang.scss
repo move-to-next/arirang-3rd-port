@@ -3,6 +3,9 @@
 @use "reset";
 
 .modern-arirang-container{
+    section{
+        background-color: vars.$sand;
+    }
     section.top-banner{
         position: relative;
         width: 100%;
@@ -47,11 +50,17 @@
                     .video-youtube{
                         @include common.video-youtube;
                     }
+                    p{
+                        font-size: 24px;
+                        font-weight: 600;
+                        font-family: vars.$Kor-head;
+                        text-align: center;
+                    }
                 }
             }
         }
-        &:first-child{
-            margin-top: 8vh;
+        &.militery-arirang [class*=-inner]{
+            margin-top: 10vh;
         }
     }
 }
