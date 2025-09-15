@@ -1,6 +1,6 @@
 // HEADER, FOOTER INCLUDE
 // 이벤트 리스너 - 페이지 로드 완료 감지
-window.addEventListener('load', async function(){
+window.addEventListener('DOMContentLoaded', async function(){
     // CSS 선택자 - 특정 속성을 가진 요소들 찾기
     const allIncludes = document.querySelectorAll('[data-include-path]');
     // 반복문 - 찾은 요소들을 하나씩 찾기
@@ -22,6 +22,29 @@ window.addEventListener('load', async function(){
                 console.error('인클루드 로드 실패', error);
             }
         }
+    }
+
+    init();
+
+    function init(){
+        setupElement();
+        footerClickOp();
+    };
+
+    function setupElement(){
+        section = document.querySelectorAll('section');
+        footerBtn = document.querySelector('button.any-site-btn');
+        footerOptions = document.querySelector("ul.any-site-lists");
+    };
+    
+    function footerClickOp(){
+        section.forEach((sect) => {
+            sect.addEventListener('click', () => footerToggle());
+        })
+        footerBtn.addEventListener('click', () => footerToggle());
+    };
+    function footerToggle(){
+        footerOptions.classList.toggle('active');
     }
 })
 

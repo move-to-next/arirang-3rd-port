@@ -1,4 +1,5 @@
 @use "variables" as vars;
+@use "reset";
 
 // ##### COMMON STYLES #####
 body{
@@ -232,11 +233,12 @@ header{
     position: fixed;
     width: 100%;
     z-index: 100;
+    border-bottom: 1px solid vars.$dark-brown;
     .header-inner{
         position: relative;
         width: 100%;
         display: flex;
-        padding: 4vh 5vw;
+        padding: 3vh 5vw;
         justify-content: space-between;
         .logo{
             position: relative;
@@ -272,9 +274,11 @@ header{
                     list-style: none;
                     li.gnb-list{
                         a.gnb-text{
+                            display: block;
                             font-family: vars.$Kor-cont;
                             font-weight: 800;
                             font-size: 24px;
+                            transform: translateY(3px);
                             letter-spacing: -1px;
                         }
                     }

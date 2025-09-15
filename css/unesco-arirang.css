@@ -8,6 +8,41 @@
   font-weight: normal;
   font-display: swap;
 }
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 500;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  border: none;
+}
+
+.hide {
+  display: block;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  text-indent: -9999em;
+}
+
 body {
   position: relative;
   margin: 0;
@@ -28,12 +63,13 @@ header {
   position: fixed;
   width: 100%;
   z-index: 100;
+  border-bottom: 1px solid #774E35;
 }
 header .header-inner {
   position: relative;
   width: 100%;
   display: flex;
-  padding: 4vh 5vw;
+  padding: 3vh 5vw;
   justify-content: space-between;
 }
 header .header-inner .logo {
@@ -53,8 +89,7 @@ header .header-inner .logo a {
 header .header-inner .logo a img {
   position: absolute;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 header .header-inner .menu {
   display: flex;
@@ -63,7 +98,6 @@ header .header-inner .menu {
   width: 70%;
 }
 header .header-inner .menu nav.gnb {
-  width: -moz-fit-content;
   width: fit-content;
 }
 header .header-inner .menu nav.gnb ul.gnb-wrap {
@@ -74,9 +108,11 @@ header .header-inner .menu nav.gnb ul.gnb-wrap {
   list-style: none;
 }
 header .header-inner .menu nav.gnb ul.gnb-wrap li.gnb-list a.gnb-text {
+  display: block;
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 800;
   font-size: 24px;
+  transform: translateY(3px);
   letter-spacing: -1px;
 }
 header .header-inner .menu button.menu-btn {
@@ -128,8 +164,7 @@ footer .footer-inner .footer-main .footer-logo img {
   bottom: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 footer .footer-inner .footer-main .footer-info {
   position: relative;
@@ -213,43 +248,11 @@ footer .footer-inner .footer-actions .sns-links > * img {
   opacity: 0.5;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  font-weight: 500;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  cursor: pointer;
-}
-
-input {
-  border: none;
-}
-
-.hide {
-  display: block;
-  width: 1px;
-  height: 1px;
-  font-size: 1px;
-  text-indent: -9999em;
-}
-
-.unesco-heritage-container section {
+.unesco-heritage-container {
   background-color: #F3EEDE;
+}
+.unesco-heritage-container section {
+  padding: 5vh 0;
 }
 .unesco-heritage-container section.top-banner {
   position: relative;
@@ -284,9 +287,7 @@ input {
   flex-direction: column;
   font-family: "JeongseonArirangHon";
   z-index: 20;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .unesco-heritage-container section.top-banner .top-banner-inner .title-section span.sub-title {
   font-size: 3em;
@@ -297,7 +298,8 @@ input {
 }
 .unesco-heritage-container section.heritage-story .heritage-story-inner {
   flex-direction: row;
-  padding: 10vh 12vw;
+  padding: 5vh 12vw;
+  margin-top: 10vh;
 }
 .unesco-heritage-container section.heritage-story .heritage-story-inner .info-section {
   width: 70%;
@@ -363,9 +365,7 @@ input {
   line-height: 12px;
   font-weight: 600;
   margin-left: 8px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .unesco-heritage-container section.heritage-story .heritage-story-inner .simbol-section {
   position: relative;
@@ -376,27 +376,23 @@ input {
   top: 0%;
   width: 100%;
   height: 100%;
-  -webkit-mask-image: url(../images/icon/unesco.png);
-          mask-image: url(../images/icon/unesco.png);
-  -webkit-mask-position: center center;
-          mask-position: center center;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+  mask-image: url(../images/icon/unesco.png);
+  mask-position: center center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
   background-color: #774E35;
   opacity: 0.2;
 }
 .unesco-heritage-container section.heritage-reasons .heritage-reasons-inner {
-  padding: 10vh 12vw;
+  padding: 5vh 12vw;
 }
 .unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .heritage-reason {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin-bottom: 5vh;
 }
 .unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .heritage-reason .title-area {
-  width: -moz-fit-content;
   width: fit-content;
   display: inline-block;
   border-bottom: 2px solid rgba(119, 78, 53, 0.4);
@@ -434,6 +430,35 @@ input {
   font-style: normal;
   font-size: 12px;
 }
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .image-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 1vw;
+  margin-bottom: 5vh;
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .image-section .thum {
+  position: relative;
+  padding-top: 40%;
+  overflow: hidden;
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .image-section .thum.first {
+  width: 40%;
+  transform: translateY(-5%);
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .image-section .thum.second {
+  width: 60%;
+  transform: translateY(5%);
+}
+.unesco-heritage-container section.heritage-reasons .heritage-reasons-inner .image-section .thum img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transform: scale(1.2);
+}
 .unesco-heritage-container section.arirang-slogan {
   background-color: #F3EEDE;
 }
@@ -443,6 +468,7 @@ input {
   gap: 0.5vh;
   width: 60%;
   margin: 0 auto;
+  margin-bottom: 10vh;
   text-align: center;
   font-size: 36px;
 }
@@ -453,4 +479,7 @@ input {
   font-style: normal;
   font-weight: 700;
   color: #774E35;
+  border-bottom: 1px solid #774E35;
 }
+
+/*# sourceMappingURL=unesco-arirang.css.map */
