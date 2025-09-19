@@ -74,8 +74,8 @@ header .header-inner {
 }
 header .header-inner .logo {
   position: relative;
-  min-width: 12vw;
-  padding-top: 5.2%;
+  min-width: 9vw;
+  padding-top: 4%;
   height: 0;
 }
 header .header-inner .logo a {
@@ -95,7 +95,7 @@ header .header-inner .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 65%;
 }
 header .header-inner .menu nav.gnb {
   width: fit-content;
@@ -111,7 +111,7 @@ header .header-inner .menu nav.gnb ul.gnb-wrap li.gnb-list a.gnb-text {
   display: block;
   font-family: "Nanum Gothic", sans-serif;
   font-weight: 800;
-  font-size: 24px;
+  font-size: 20px;
   transform: translateY(3px);
   letter-spacing: -1px;
 }

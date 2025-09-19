@@ -284,13 +284,15 @@
                         flex: 1;
                         background-color: transparent;
                         &.area-tab-btn{
-                            border: 3px solid vars.$crimson;
+                            box-sizing: border-box;
+                            border: 1px solid vars.$crimson;
                             span{
                                 color: vars.$crimson;
                             }
                         }
                         &.modern-tab-btn{
-                            border: 3px solid vars.$dark-navy;
+                            box-sizing: border-box;
+                            border: 1px solid vars.$dark-navy;
                             span{
                                 color: vars.$dark-navy;
                             }

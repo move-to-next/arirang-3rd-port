@@ -29,14 +29,56 @@ window.addEventListener('DOMContentLoaded', async function(){
     function init(){
         setupElement();
         footerClickOp();
+        typeBtnToggle();
+        // headerBgChange();
     };
 
     function setupElement(){
+        header = document.querySelector('header')
         section = document.querySelectorAll('section');
-        footerBtn = document.querySelector('button.any-site-btn');
-        footerOptions = document.querySelector("ul.any-site-lists");
+        footerBtn = document.querySelector('footer button.any-site-btn');
+        footerOptions = document.querySelector("footer ul.any-site-lists");
+        typeButtons = document.querySelectorAll('.type-tab-btns button');
+        typeLists = document.querySelectorAll('.type-list-wrap [class*=-list-wrap]');
     };
     
+    function typeBtnToggle(){
+        typeButtons.forEach((btn, index)=>{
+            btn.addEventListener('click', () => {
+                if(typeButtons[0].classList.contains('active')){
+                    typeButtons[0].classList.remove('active');
+                    typeButtons[1].classList.add('active');
+                }
+                else{
+                    typeButtons[1].classList.remove('active');
+                    typeButtons[0].classList.add('active');
+                }
+                if(typeButtons[1].classList.contains('active')){
+                    typeLists[0].classList.remove('active');
+                    typeLists[1].classList.add('active');
+                }
+                else{
+                    typeLists[1].classList.remove('active');
+                    typeLists[0].classList.add('active');
+                }
+            })
+        })
+    }
+
+    function headerBgChange(){
+        gsap.to(header,{opacity: 0},
+            {
+                opacity: 1
+                , scrolltrigger:{
+                    trigger: header,
+                    start:"top 50%",
+                    end:'bottom 10%',
+                    markers: true,
+                }
+            }
+        )
+    }
+
     function footerClickOp(){
         section.forEach((sect) => {
             sect.addEventListener('click', () => footerToggle());

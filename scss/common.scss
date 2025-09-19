@@ -242,8 +242,8 @@ header{
         justify-content: space-between;
         .logo{
             position: relative;
-            min-width: 12vw;
-            padding-top: 5.2%;
+            min-width: 9vw;
+            padding-top: 4%;
             height: 0;
             a{
                 position: absolute;
@@ -263,7 +263,7 @@ header{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 70%;
+            width: 65%;
             nav.gnb{
                 width: fit-content;
                 ul.gnb-wrap{
@@ -277,7 +277,7 @@ header{
                             display: block;
                             font-family: vars.$Kor-cont;
                             font-weight: 800;
-                            font-size: 24px;
+                            font-size: 20px;
                             transform: translateY(3px);
                             letter-spacing: -1px;
                         }
