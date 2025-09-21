@@ -89,8 +89,7 @@ header .header-inner .logo a {
 header .header-inner .logo a img {
   position: absolute;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 header .header-inner .menu {
   display: flex;
@@ -99,7 +98,6 @@ header .header-inner .menu {
   width: 65%;
 }
 header .header-inner .menu nav.gnb {
-  width: -moz-fit-content;
   width: fit-content;
 }
 header .header-inner .menu nav.gnb ul.gnb-wrap {
@@ -108,6 +106,9 @@ header .header-inner .menu nav.gnb ul.gnb-wrap {
   align-items: center;
   gap: 3vw;
   list-style: none;
+}
+header .header-inner .menu nav.gnb ul.gnb-wrap li.gnb-list {
+  position: relative;
 }
 header .header-inner .menu nav.gnb ul.gnb-wrap li.gnb-list a.gnb-text {
   display: block;
@@ -166,8 +167,7 @@ footer .footer-inner .footer-main .footer-logo img {
   bottom: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 footer .footer-inner .footer-main .footer-info {
   position: relative;
@@ -295,9 +295,7 @@ footer .footer-inner .footer-actions .sns-links > * img {
   flex-direction: column;
   font-family: "JeongseonArirangHon";
   z-index: 20;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .main-page-container section.slide-banner .slide-wrap .banner .title-section span.sub-title {
   font-size: 3em;
@@ -324,8 +322,7 @@ footer .footer-inner .footer-actions .sns-links > * img {
   height: 100%;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main-page-container section.slide-banner .slide-wrap .banner.first::before {
   background-position-y: 10%;
@@ -380,7 +377,6 @@ footer .footer-inner .footer-actions .sns-links > * img {
 .main-page-container section.about .about-inner > [class*=-section] .hero-section .title h2.main-title {
   position: relative;
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
   font-size: 56px;
   font-family: "Nanum Myeongjo", serif;
@@ -455,8 +451,7 @@ footer .footer-inner .footer-actions .sns-links > * img {
   height: 120%;
   bottom: 0;
   right: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .main-page-container section.about .about-inner > [class*=-section] .thum-section .sub-thum {
   position: absolute;
@@ -476,8 +471,7 @@ footer .footer-inner .footer-actions .sns-links > * img {
   height: 100%;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main-page-container section.about .about-inner .about-bg {
   position: absolute;
@@ -500,8 +494,7 @@ footer .footer-inner .footer-actions .sns-links > * img {
   height: 100%;
   top: 0;
   bottom: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   opacity: 0.2;
 }
 .main-page-container section.about .about-inner .about-bg .top-bg {
@@ -522,8 +515,7 @@ footer .footer-inner .footer-actions .sns-links > * img {
   width: 100%;
   height: 100%;
   transform: rotateY(180deg);
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .main-page-container section.lyrics {
   position: relative;
@@ -544,7 +536,6 @@ footer .footer-inner .footer-actions .sns-links > * img {
 .main-page-container section.lyrics .lyrics-inner .title h2.main-title {
   position: relative;
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
   font-size: 56px;
   font-family: "Nanum Myeongjo", serif;
@@ -646,7 +637,6 @@ footer .footer-inner .footer-actions .sns-links > * img {
 .main-page-container section.types .types-inner .title h2.main-title {
   position: relative;
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
   font-size: 56px;
   font-family: "Nanum Myeongjo", serif;
@@ -749,8 +739,7 @@ footer .footer-inner .footer-actions .sns-links > * img {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main-page-container section.types .types-inner .type-container .type-list-wrap > [class*=-list-wrap].active > ul[class*=-list-cards] > li[class*=-list-card] .text-box {
   position: relative;
@@ -778,7 +767,6 @@ footer .footer-inner .footer-actions .sns-links > * img {
   position: relative;
   padding: 1.5vh 7vh;
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 40px;
   border: none;
@@ -796,7 +784,6 @@ footer .footer-inner .footer-actions .sns-links > * img {
   position: relative;
   padding: 1.5vh 7vh;
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 40px;
   border: none;
@@ -813,7 +800,6 @@ footer .footer-inner .footer-actions .sns-links > * img {
 .main-page-container section.unesco .unesco-inner .title h2.main-title {
   position: relative;
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
   font-size: 56px;
   font-family: "Nanum Myeongjo", serif;
@@ -871,7 +857,6 @@ footer .footer-inner .footer-actions .sns-links > * img {
   position: relative;
   padding: 1.5vh 7vh;
   display: block;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 40px;
   border: none;
@@ -889,14 +874,10 @@ footer .footer-inner .footer-actions .sns-links > * img {
   height: 100%;
   transform: translateY(-50%);
   opacity: 0.2;
-  -webkit-mask-image: url(../images/icon/unesco.png);
-          mask-image: url(../images/icon/unesco.png);
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  -webkit-mask-position: center center;
-          mask-position: center center;
+  mask-image: url(../images/icon/unesco.png);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center center;
   background-color: #BCA48A;
   z-index: -1;
 }
@@ -920,8 +901,7 @@ footer .footer-inner .footer-actions .sns-links > * img {
   height: 120%;
   bottom: 0;
   right: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .main-page-container section.unesco .unesco-inner .unesco-container .thum-section .sub-thum {
   position: absolute;
@@ -941,8 +921,7 @@ footer .footer-inner .footer-actions .sns-links > * img {
   height: 100%;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main-page-container section.unesco .unesco-inner .unesco-container .thum-section .main-thum img {
   width: 120%;
@@ -961,12 +940,9 @@ footer .footer-inner .footer-actions .sns-links > * img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-mask-image: url(../images/icon/ichh-logo.svg);
-          mask-image: url(../images/icon/ichh-logo.svg);
-  -webkit-mask-size: contain;
-          mask-size: contain;
-  -webkit-mask-position: center center;
-          mask-position: center center;
+  mask-image: url(../images/icon/ichh-logo.svg);
+  mask-size: contain;
+  mask-position: center center;
   background-color: #FFFFFF;
   z-index: 50;
 }
@@ -1031,8 +1007,7 @@ footer .footer-inner .footer-actions .sns-links > * img {
   height: 100%;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   opacity: 0.5;
 }
 .main-page-container section.content .content-inner .content-left article.arirang-story .video-cards .video-card .video-youtube {
@@ -1090,8 +1065,7 @@ footer .footer-inner .footer-actions .sns-links > * img {
   height: 100%;
   top: 0;
   bottom: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main-page-container section.content .content-inner .content-right {
   position: relative;
@@ -1152,3 +1126,5 @@ footer .footer-inner .footer-actions .sns-links > * img {
 .main-page-container section.content .content-inner .content-right article.museum-info .content-info address.museum-overview dl dd {
   margin: 0;
 }
+
+/*# sourceMappingURL=main-page.css.map */

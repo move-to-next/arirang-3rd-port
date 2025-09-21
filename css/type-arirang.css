@@ -107,6 +107,9 @@ header .header-inner .menu nav.gnb ul.gnb-wrap {
   gap: 3vw;
   list-style: none;
 }
+header .header-inner .menu nav.gnb ul.gnb-wrap li.gnb-list {
+  position: relative;
+}
 header .header-inner .menu nav.gnb ul.gnb-wrap li.gnb-list a.gnb-text {
   display: block;
   font-family: "Nanum Gothic", sans-serif;

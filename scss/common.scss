@@ -273,6 +273,7 @@ header{
                     gap: 3vw;
                     list-style: none;
                     li.gnb-list{
+                        position: relative;
                         a.gnb-text{
                             display: block;
                             font-family: vars.$Kor-cont;

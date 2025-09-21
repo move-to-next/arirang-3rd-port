@@ -89,7 +89,8 @@ header .header-inner .logo a {
 header .header-inner .logo a img {
   position: absolute;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .header-inner .menu {
   display: flex;
@@ -98,6 +99,7 @@ header .header-inner .menu {
   width: 65%;
 }
 header .header-inner .menu nav.gnb {
+  width: -moz-fit-content;
   width: fit-content;
 }
 header .header-inner .menu nav.gnb ul.gnb-wrap {
@@ -106,6 +108,9 @@ header .header-inner .menu nav.gnb ul.gnb-wrap {
   align-items: center;
   gap: 3vw;
   list-style: none;
+}
+header .header-inner .menu nav.gnb ul.gnb-wrap li.gnb-list {
+  position: relative;
 }
 header .header-inner .menu nav.gnb ul.gnb-wrap li.gnb-list a.gnb-text {
   display: block;
@@ -164,7 +169,8 @@ footer .footer-inner .footer-main .footer-logo img {
   bottom: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 footer .footer-inner .footer-main .footer-info {
   position: relative;
@@ -247,5 +253,3 @@ footer .footer-inner .footer-actions .sns-links > * img {
   filter: invert(1);
   opacity: 0.5;
 }
-
-/*# sourceMappingURL=common.css.map */
