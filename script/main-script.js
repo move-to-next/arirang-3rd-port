@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 // HEADER, FOOTER INCLUDE
 // 이벤트 리스너 - 페이지 로드 완료 감지
 window.addEventListener('DOMContentLoaded', async function(){
@@ -30,11 +31,12 @@ window.addEventListener('DOMContentLoaded', async function(){
         setupElement();
         footerClickOp();
         typeBtnToggle();
-        // headerBgChange();
+        headerBgChange();
     };
 
     function setupElement(){
-        header = document.querySelector('header')
+        body = document.querySelector('body');
+        header = document.querySelector('header');
         section = document.querySelectorAll('section');
         footerBtn = document.querySelector('footer button.any-site-btn');
         footerOptions = document.querySelector("footer ul.any-site-lists");
@@ -66,17 +68,26 @@ window.addEventListener('DOMContentLoaded', async function(){
     }
 
     function headerBgChange(){
-        gsap.to(header,{opacity: 0},
-            {
-                opacity: 1
-                , scrolltrigger:{
-                    trigger: header,
-                    start:"top 50%",
-                    end:'bottom 10%',
-                    markers: true,
-                }
-            }
-        )
+        ScrollTrigger.create({
+            trigger: body,
+            start: 160,
+            end: 80,
+            smooth: true,
+            onEnter : () => {
+                gsap.to(header, {
+                    backgroundColor: 'white',
+                    duration: 0.3,
+                    ease: 'power2.out',
+                })
+            },
+            onLeaveBack : () => {
+                gsap.to(header, {
+                    backgroundColor: 'transparent',
+                    duration: 0.3,
+                    ease: 'power2.out',
+                })
+            },
+        })
     }
 
     function footerClickOp(){
